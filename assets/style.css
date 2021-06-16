@@ -57,7 +57,6 @@ header {
 
 .logo img{
 	height: 5rem;
-	border-radius: 100%;
 }
 
 .navbar {
@@ -85,6 +84,30 @@ header {
 }
 
 
+/*********MEDIA QUERIES*********/
+@media only screen and (max-width: 768px) {
+
+	html {
+		font-size: 55%;
+	}
+
+	.lines {
+		width: 25px;
+		height: 3px;
+		background: #333;
+		margin: 5px;
+	}
+
+	.navbar {
+		position: fixed;
+		top: 8rem;
+		left: 0;
+		width: 100%;
+		background: var(--yellow);
+		border-top: .2rem solid rgba(0, 0, 0, .1);
+	}
+
+}
 
 /*font-families:
 'Mate SC', serif;
