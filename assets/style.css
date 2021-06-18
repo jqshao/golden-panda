@@ -105,6 +105,29 @@ header {
 		width: 100%;
 		background: var(--yellow);
 		border-top: .2rem solid rgba(0, 0, 0, .1);
+		visibility: hidden;
+	}
+
+	.navbar ul {
+		flex-flow: column;
+		padding: 2rem;
+	}
+
+	.nav-options {
+		margin: 1.5rem;
+		width: 100%;
+	}
+
+	.nav-options a{
+		display: block;
+		color: white;
+		padding-left: 2rem;
+		border-left: .2rem solid white;
+		font-size: 2rem;
+	}
+
+	.nav-options a:hover {
+		color: #333;
 	}
 
 }
