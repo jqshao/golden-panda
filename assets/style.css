@@ -1,5 +1,5 @@
 :root {
-	--yellow: #F7CA3E;
+	--pink: #ffdbbc;
 }
 
 * {
@@ -15,8 +15,8 @@ h1, h3 {
 }
 
 *::selection {
-	background:  var(--yellow);
-	color: white;
+	background:  var(--pink);
+	color: #333;
 }
 
 html {
@@ -80,9 +80,8 @@ header {
 }
 
 .nav-options a:hover {
-	color: var(--yellow);
+	color: white;
 }
-
 
 /*********MEDIA QUERIES*********/
 @media only screen and (max-width: 768px) {
@@ -103,9 +102,11 @@ header {
 		top: 8rem;
 		left: 0;
 		width: 100%;
-		background: var(--yellow);
+		background: var(--pink);
 		border-top: .2rem solid rgba(0, 0, 0, .1);
-		visibility: hidden;
+		tranform: scaleY(0);
+		transform-origin: top;
+		opacity: 0;
 	}
 
 	.navbar ul {
@@ -120,235 +121,143 @@ header {
 
 	.nav-options a{
 		display: block;
-		color: white;
+		color: #333;
 		padding-left: 2rem;
-		border-left: .2rem solid white;
+		border-left: .2rem solid #333;
 		font-size: 2rem;
 	}
 
 	.nav-options a:hover {
-		color: #333;
+		color: white;
 	}
 
+	.nav-toggle {
+		transform: scaleY(1);
+		opacity: 1;
+	}
 }
 
-/*font-families:
-'Mate SC', serif;
-'Prompt', sans-serif;
-'Scope One', serif;*/
-/*
-body {
-	font-family:  'Prompt', sans-serif;
-	background-color: /*#d1d3ed;*//*white;
-	overflow-x: hidden;*/
+
+
+
+
+/*********HOME SECTION STYLES*********/
+
+section {
+	min-height: 100vh;
+	padding: 1rem 10%;
+	padding-top: 8.5rem;
 }
-/*
-.header {
-	height: 90vh;
+
+.home {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 	position: relative;
+	z-index: 0;
+	overflow: hidden;
 }
 
-.navbar {
-	height: 110px;
+.home::before,
+.home::after {
+	content: '';
+	position: absolute;
+	top: 5rem;
+	right: -6rem;
+	background: var(--pink);
+	height: 40rem;
+	width: 70rem;
+	border-radius: 3rem;
+	transform: rotate(-45deg);
+	z-index: -2;
+	animation: animate 1s linear 1;
+}
+
+@keyframes animate {
+	0% {
+		transform: rotate(45deg) translateY(-40rem);
+	}
+}
+
+.home::before {
+	top: -7rem;
+	background: white;
+	box-shadow: 0 1rem 4rem rgba(0, 0, 0, .1);
+	z-index: -1;
+	content: 'WE USE SOYBEAN OIL AND CHICKEN BROTH';
+	font-size: 1rem;
+}
+
+.image {
+	flex: 1 1 39rem;
+}
+
+.image img {
 	width: 100%;
-	background-color: #ffdbbc;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 40px;
-	z-index: 10;
-	position: fixed;
 }
 
-.navbar-box {
-	display: flex;
-	align-items: center;
-	font-size: 2rem;
-	color: white;
+.content {
+	flex: 1 1 39rem;
 }
 
-.heading-tertiary {
-	font-family: 'Mate SC', serif;
-	font-size: 3.5rem;
+.content h1 {
+	font-size: 7rem;
 	color: #bf452f;
 	text-shadow: -5px 3px 4px #e4ad45;
 }
 
-.navbar-list {
-	list-style: none;
-	font-size:  1.6rem;
+.content h3 {
+	font-size: 2.5rem;
+	color: #666;
+	padding: 1rem 0;
 }
 
-.navbar-item {
-	display: inline-block;
-	justify-content: right;
-}
-
-.navbar-link:visited,
-.navbar-link:link {
-	text-decoration: none;
+.btn {
+	font-size: 1.7rem;
+	padding: .7rem 4rem;
+	border-radius: 5rem;
+	margin-top: 1rem;
+	background: none;
 	color: #333;
-	padding: 2rem;
-	transition: all .2s ease;
-}
-
-.navbar-link:hover {
-	background-color: #e4ad45;
-	color: white;
-}
-
-.toggle {
-	height:  5rem;
-	width:  5rem;
-	display:  none;
-}*/
-/*
-.toggle div {
-	height: 4px;
-	width: 100%;
-	background-color: white;
-	margin: 1rem;
-}
-
-.header-container {
-	width: 100%;
-	height:  100%;
-	background-size: cover;
-	color: white;
-}
-
-.header-box {
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
+	cursor: pointer;
 	text-transform: uppercase;
-	color: #333;
+	border: .2rem solid #e4ad45;
 }
 
-.heading-primary {
-	font-family: 'Mate SC', serif;
-	font-size: 2.7em;
-	font-weight: 600;
-	letter-spacing: 0.17em;
-	color: #e5a681;
-	margin-bottom: 0.5em;
+.btn:hover {
+	background: #e4ad45;
 }
 
-.lead {
-	font-size: 1em;
-	font-weight: 500;
-	letter-spacing: 0.1em;
-	font-family: 'Mate SC', serif;
-}
 
-.menu-view:visited,
-.menu-view:link {
-	text-decoration: none;
-	display: inline-block;
-/*	color: #e5a681;*/
-	font-size: 1.35em;
-	padding: 0.6em;
-	margin-top: 2em;
-	border: 1px solid black;
-	border-radius: 100px;
-	transition: all .3s ease;
-	box-shadow: 0 1rem 1rem rgba(240, 107, 55, .1);
-}
+/*********MEDIA QUERIES*********/
 
-@media only screen and (max-width: 1056px) {
-	.heading-tertiary {
-		font-size: 3.1rem;
+
+@media only screen and (max-width: 991px) {
+	
+	html {
+		font-size: 55%;
 	}
 
-	.navbar-list {
-		font-size:  1.4rem;
-	}
-
-	.navbar-link:visited,
-	.navbar-link:link {
-		text-decoration: none;
-		color: #333;
-		padding: 2rem;
-		transition: all .2s ease;
-	}
-
-	.navbar-link:hover {
-		background-color: #e4ad45;
-		color: white;
+	.home::before,
+	.home::after {
+		display: none;
 	}
 }
 
-/************MENU************/
-.menu {
-	width: 100%;
-	padding: 10rem 5rem;
-	background-image: linear-gradient(to right bottom, #d1d3ed, #e5d4ef);
-}
-
-.menu-heading {
-	font-size: 6em;
-	text-align: center;
-	font-family: 'Mate SC', serif;
-	font-size: 2.8em;
-	font-weight: 600;
-	letter-spacing: 0.17em;
-	text-transform: uppercase;
-	color: #ef9a7c;
-}
-
-.menu-categories {
-	list-style: none;
-	font-size: 2em;
-	display: flex;
-	justify-content: space-between;
-	align-content: center;
-	padding: 0 40px;
-	position: absolute;
-	/*top: 60%;
-	left: 50%;*/
-/*	transform: translate(-50%, -50%, -50%, -50%);*/
-}
-
-.menu-category {
-	display: inline-block;
-	margin: 100px 65px 65px 65px;
-	font-size: 0.7em;
-}
-
-.menu-link:visited,
-.menu-link:link {
-	text-decoration: none;
-	color: #333;
-	padding: 0.5em;
-	text-align: center;
+@media only screen and (max-width: 768px) {
+	
+	.content {
+		text-align: center;
+	}
 
 }
 
-.menu-link:hover {
-	background-color: #e4ad45;
-	color: white;
-}*/
+@media only screen and (max-width: 500px) {
+	
+	html {
+		font-size: 50%;
+	}
 
-/*.navbar-list {
-	list-style: none;
-	font-size:  1.6rem;
 }
 
-.navbar-item {
-	display: inline-block;
-	justify-content: right;
-}
-
-.navbar-link:visited,
-.navbar-link:link {
-	text-decoration: none;
-	color: #333;
-	padding: 2rem;
-	transition: all .2s ease;
-}
-
-.navbar-link:hover {
-	background-color: #e4ad45;
-	color: white;*/
