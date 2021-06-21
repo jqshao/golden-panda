@@ -21,11 +21,11 @@ h1, h3 {
 
 html {
 	font-size: 62.5%;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 body {
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 	height: 200rem;
 }
 
@@ -159,6 +159,7 @@ section {
 	overflow: hidden;
 }
 
+
 .home::before,
 .home::after {
 	content: '';
@@ -243,6 +244,11 @@ section {
 	.home::after {
 		display: none;
 	}
+
+	.row {
+		flex-wrap: wrap;
+	}
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -261,3 +267,53 @@ section {
 
 }
 
+
+
+/*********MENU SECTION*********/
+
+.heading {
+	text-align: center;
+	font-size: 4rem;
+	padding: 0.5rem;
+	color: #333;	
+}
+
+.heading span {
+	color: #bf452f;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.row .column {
+	margin: 1rem;
+	padding: 1.2rem;
+	border-radius: 1rem;
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+#specials {
+	flex: calc(855/320)px;
+}
+
+#hotbar {
+	flex: calc(904/740)px;
+}
+
+#meal {
+	flex: calc(904/723)px;
+}
+
+.row .column img {
+	width: 100%;
+	object-fit: cover;
+}
+
+/*********POPULAR SECTION*********/
+
+.popular {
+	background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../images/3828.jpg) no-repeat;
+}
