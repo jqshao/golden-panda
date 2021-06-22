@@ -12,14 +12,6 @@ $(document).ready(function(){
 
 	});
 
-	$('.menu .list .btn').click(function(){
-		$(this).addClass('active').siblings().removeClass('active');
-
-		let src = $(this).attr('data-src');
-
-		$('#menu-img').attr('src', src);
-	})
-
 })
 
 
