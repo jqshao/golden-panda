@@ -312,8 +312,12 @@ section {
 	flex: calc(904/723)px;
 }
 
+#chefs {
+	flex: calc(904/696)px;
+}
+
 .row .column img:hover {
-	transform: scale(1.15);
+	transform: scale(1.1);
 }
 
 .row .column img {
@@ -338,7 +342,7 @@ section {
 
 .box {
 	background: #fff;
-	width: 35rem;
+	width: 30rem;
 	padding: 2rem;
 	margin: 2rem;
 	border-radius: 1rem;
@@ -485,4 +489,10 @@ section {
 		border-bottom-right-radius: 0;
 	}
 
+}
+
+/*contact info*/
+
+#contact-info {
+	list-style: none;
 }
