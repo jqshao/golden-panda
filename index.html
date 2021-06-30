@@ -50,7 +50,7 @@
 			<div class="content">
 				<h1>Golden Panda</h1>
 				<h3>Delicious Chinese food in Lexington, Georgia</h3>
-				<a href="#meal"><button class="btn">view menu</button></a>
+				<a href="#popular"><button class="btn">view popular items</button></a>
 			</div>
 
 			<div class="image">
@@ -62,7 +62,7 @@
 
 
 		<!-- Menu section starts -->
-		<section class="menu" id="menu">
+		<section id="menu">
 
 			<h1 class="heading">our complete <span>menu</span></h1>	
 
@@ -91,7 +91,7 @@
 
 
 		<!-- popular section starts -->
-		<section class="popular" id="popular">
+		<section id="popular">
 
 			<h1 class="heading">most <span>popular</span> foods</h1>
 
@@ -155,7 +155,7 @@
 
 		<!-- location section begins -->
 
-		<section class="location" id="location">
+		<section id="location">
 
 			<div class="location-content">
 
@@ -190,34 +190,63 @@
 
 
 
-		<!-- footer section starts -->
+		<!-- contact section starts -->
 
-
-		<div class="footer" id="contact">
-			<div class="box-container">
-
-				<div class="box">
-					<h3>contact info</h3>
-					<ul id="contact-info">
-						<li>777 Athens Road Suite 105, Lexington, GA 30648</li>
-						<li>golden.panda.lexington@gmail.com</li>
-						<li>Dine-in and Takeout available</li>
-						<li>(706) 743-0886</li>
+		<section class="contact-us" id="contact">
+			<div class="contact-content">
+				<h2>Contact Us</h2>
+			</div>
+			<div class="container">
+				<div class="contactInfo">
+					<div class="contactBox">
+						<img class="icon" src="images/icons/placeholder.svg" alt="location icon">
+						<div class="text">
+							<h3>Address</h3>
+							<p>777 Athens Road Suite 105,<br> Lexington, GA 30648</p>
+						</div>
+					</div>
+					<div class="contactBox">
+						<img class="icon" src="images/icons/fork-and-knife.svg" alt="cutlery icon">
+						<div class="text">
+							<h3>Food Options</h3>
+							<p>Dine-in and Takeout available</p>
+						</div>
+					</div>
+					<div class="contactBox">
+						<img class="icon" src="images/icons/phone-call.svg" alt="phone icon">
+						<div class="text">
+							<h3>Phone</h3>
+							<p>(706) 743-0886</p>
+						</div>
+					</div>
+				</div>
+				<div class="contactForm"><h2>Send Message</h2>
+					<form>
 						
-						
-					</ul>
+						<div class="inputBox">
+							<span>Name</span>
+							<input type="text" name="Your name" required="required">
+						</div>
+						<div class="inputBox">
+							<span>Email</span>
+							<input type="text" name="Your email" required="required">							
+						</div>
+						<div class="inputBox">
+							<span>Type your Message...</span>
+							<textarea required="required" name="Type your message"></textarea>							
+						</div>
+						<div class="inputBox">
+							<input type="submit" value="Send">
+						</div>
+
+					</form>
 				</div>
 
-				<div class="box">
-					<h3>quick links</h3>
-					<a href="#">home</a>
-					<a href="#menu">menu</a>
-					<a href="#location">location</a>
-					<a href="#contact">contact</a>
-				</div>
+			</div>
+		</section>
 
 
-		<!-- footer section ends -->
+		<!-- contact section ends -->
 
 
 		<!-- Script -->

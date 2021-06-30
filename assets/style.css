@@ -10,7 +10,7 @@
 	text-decoration: none;
 }
 
-h1, h3 {
+h1, h2, h3 {
 	font-family: 'Mate SC', serif;
 }
 
@@ -21,12 +21,12 @@ h1, h3 {
 
 html {
 	font-size: 62.5%;
-	/*overflow-x: hidden;*/
+/*	overflow-x: hidden;*/
 }
 
 body {
-	/*overflow-x: hidden;*/
-	height: 200rem;
+	overflow-x: hidden;
+/*	height: 200rem;*/
 }
 
 html::-webkit-scrollbar {
@@ -327,20 +327,20 @@ section {
 
 /*********POPULAR SECTION*********/
 
-.popular { /*change background image*/
+#popular { /*change background image*/
 	background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../images/3828.jpg) no-repeat; 
 	background-position: center;
 	background-attachment: fixed;
 }
 
-.box-container {
+#popular .box-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-.box {
+#popular .box-container .box {
 	background: #fff;
 	width: 30rem;
 	padding: 2rem;
@@ -375,7 +375,7 @@ section {
 /*********LOCATION SECTION*********/
 
 
-.location {
+#location {
 	padding: 15rem 10rem;
 	width: 100%;
 	background: var(--pink);
@@ -493,6 +493,149 @@ section {
 
 /*contact info*/
 
-#contact-info {
-	list-style: none;
+.contact-us {
+	position: relative;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+/*	background: url(../images/3828.jpg);
+	background-size: cover;*/
+}
+
+.contact-content {
+	max-width: 800px;
+	text-align: center;
+}
+
+.contact-content h2 {
+	font-size: 4rem;
+	font-weight: 600;
+	color: #e4ad45;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.container .contactInfo {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contactBox {
+	position: relative;
+	padding: 20px 0;
+	display: flex; 
+}
+
+.icon {
+	min-width: 60px;
+	height: 60px;
+	background: #e4ad45;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 2rem;
+}
+
+.text {
+	display: flex;
+	margin-left: 20px;
+	font-size: 1.5rem;
+	color: #333;
+	flex-direction: column;
+}
+
+
+.text h3 {
+	font-weight: 600;
+	color: #bf452f;
+}
+
+.contactForm {
+	width: 40%;
+	padding: 40px;
+	background: var(--pink);
+}
+
+.contactForm h2 {
+	font-size: 3rem;
+	color: #333;
+}
+
+.inputBox {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.inputBox input, 
+.inputBox textarea {
+	width: 100%;
+	padding: 5px 0;
+	font-size: 1.2em;
+	margin: 20px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+	color: #333;
+	font-weight: 600;
+	letter-spacing: .1em;
+}
+
+.inputBox span {
+	position: absolute;
+	left: 0;
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+
+.inputBox input[type="submit"] {
+	width: 100px;
+	background: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1.5rem;
+}
+
+/* to prevent double scrollbar */
+@media only screen and (max-width: 400px) {
+	html {
+		overflow-x: hidden;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+
+	.contact-us {
+		padding: 50px;
+	}
+
+	.container {
+		flex-direction: column;
+	}
+	.contactForm {
+		width: 100%;
+	}
+
+	.contactInfo {
+		width: 100%;
+		margin-bottom: 40px;
+	}
 }
