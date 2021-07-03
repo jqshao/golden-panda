@@ -47,3 +47,4 @@ $('img[data-enlargeable]').addClass('img-enlargeable').click(function() {
     }
   });
 });
+
