@@ -221,22 +221,24 @@
 					</div>
 				</div>
 				<div class="contactForm"><h2>Send Message</h2>
-					<form>
+						<form class="form" method="POST" data-netlify="true">
 						
 						<div class="inputBox">
-							<span>Name</span>
-							<input type="text" name="Your name" required="required">
+							<label for="name" class="form-label">Your Name</label>					<input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>						</div>
+						<div class="inputBox">
+							<label for="email" class="form-label">Your Email</label>
+ 							<input type="email" class="form-control" id="email" name="email" placeholder="jane@doe.com" tabindex="2" required>
 						</div>
 						<div class="inputBox">
-							<span>Email</span>
-							<input type="text" name="Your email" required="required">							
+ 							<label for="subject" class="form-label">Subject</label>
+ 							<input type="text" class="form-control" id="subject" name="subject" placeholder="Hello!" tabindex="3" required>
+ 						</div>
+						<div class="inputBox">
+							<label for="message" class="form-label">Message</label>
+							<textarea rows="5" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="4" class="form-control"></textarea>
 						</div>
 						<div class="inputBox">
-							<span>Type your Message...</span>
-							<textarea required="required" name="Type your message"></textarea>							
-						</div>
-						<div class="inputBox">
-							<input type="submit" value="Send">
+							<button class="submitBtn" type="submit">Send Message!</button>
 						</div>
 
 					</form>
