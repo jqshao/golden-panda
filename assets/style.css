@@ -204,11 +204,16 @@ section {
 	flex: 1 1 39rem;
 }
 
-.name {
+.content h1 {
 	font-size: 7rem;
 	color: #bf452f;
 	text-shadow: -5px 3px 4px #e4ad45;
 }
+
+.name {
+	color: #bf452f;
+	text-shadow: -5px 3px 4px #e4ad45;
+} /* styling on panda panda*/
 
 .content h3 {
 	font-size: 2.5rem;
