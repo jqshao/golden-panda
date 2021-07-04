@@ -204,7 +204,7 @@ section {
 	flex: 1 1 39rem;
 }
 
-.content h1 {
+.name {
 	font-size: 7rem;
 	color: #bf452f;
 	text-shadow: -5px 3px 4px #e4ad45;
