@@ -635,3 +635,9 @@ textarea {
 		margin-bottom: 40px;
 	}
 }
+
+.title {
+	color: #bf452f;
+	text-shadow: -5px 3px 4px #e4ad45;
+	font-family: 'Mate SC', serif;
+}
